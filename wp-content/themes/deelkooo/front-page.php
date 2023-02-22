@@ -1,6 +1,6 @@
 
  <?php get_header() ?>
- 
+ <?php get_defined_functions()?>
  <!-- Start Slider  -->
 <section id="home" class="home">
 <div class="slider-overlay"></div>
@@ -183,7 +183,7 @@ echo do_shortcode('[smartslider3 slider="2"]');
                            <h4><?php the_title() ?></h4>
                            <h5><?php the_date() ?> / <?php echo comments_number() ?></h5>
                            <p><?php the_excerpt() ?></p>
-                            <a href="single.php" class="btn btn-gray-border">Read More</a>
+                            <a href="<?php the_permalink(); ?>" class="btn btn-gray-border">Read More</a>
                        </div>
                    </div>
                </div>
@@ -666,7 +666,7 @@ viverra purus tristique.</p>
 						<!-- Work Item -->
 						<li class="work-item thumnail-img mix corporate">
 							<div class="work-image">
-                                <img src="images/works/img1.jpg" alt="thumbnail">
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/works/img1.jpg" alt="thumbnail">
                                 
                                  <!--Hover link-->
                                  <div class="hover-link">
